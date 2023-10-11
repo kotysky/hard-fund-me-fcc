@@ -1,9 +1,9 @@
 const { assert, expect } = require("chai")
 const { deployments } = require("hardhat")
 const { ethers, network } = require("hardhat")
-const { developmentChains } = require("../../helper-hardhat-config")
+const { developmentsChains } = require("../../helper-hardhat-config")
 
-!developmentChains.includes(network.name)
+!developmentsChains.includes(network.name)
     ? describe.skip
     : describe("FunMe", async function () {
           let fundMe
